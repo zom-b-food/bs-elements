@@ -1,0 +1,77 @@
+.beefup {
+  border-radius: 3px;
+  margin: 1em 0;
+  padding: 10px 0 0 0;
+  background-color: $primary-color;
+  &.nested {
+    background-color:$secondary-color;
+  }
+
+}
+
+.beefup:first-child {
+  margin-top: 0;
+}
+
+.beefup__head {
+  cursor: pointer;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding-right: 30px;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+ 
+
+}
+
+.beefup__head::after {
+  border-style: solid;
+  border-width: 10px 10px 0;
+  border-color: $cream transparent transparent;
+  content: '';
+  position: absolute;
+  right: 10px;
+  height: 0;
+  margin-top: -5px;
+  top: 50%;
+  width: 0;
+}
+
+.beefup__body {
+  margin-top:10px;
+  padding: 14px;
+  border-top:1px solid $tertiary-color-lighten;
+  background-color:$cream;
+  color:black;
+  &.nested {
+    background-color:$cream;
+  }
+  p {
+    text-align: left;
+  }
+}
+
+.beefup.is-open > .beefup__head::after {
+  border-width: 0 10px 10px;
+  border-color: transparent transparent $cream;
+}
+
+
+h4.beefup__head {
+  font-size: 1em;
+  line-height: 1.85em;
+  padding-bottom:3px;
+  margin-top: 0;
+  font-weight:700;
+  color: $cream;
+}
+
+h5.beefup__head {
+  font-size: 1em;
+  line-height: 1.55em;
+  padding-bottom:2px;
+  margin-top: 0;
+  font-weight:700;
+  color:$cream;
+}

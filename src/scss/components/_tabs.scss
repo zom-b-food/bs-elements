@@ -1,0 +1,147 @@
+//
+// Tabs
+//
+
+
+.nav-tabs {
+    border: 0;
+    padding: $padding-large-vertical $padding-base-horizontal;
+
+    > .nav-item{
+        > .nav-link{
+            color: $default-color;
+            margin: 0;
+            margin-right: 5px;
+            background-color: $transparent-bg;
+            border: 1px solid $transparent-bg;
+            border-radius: 30px;
+            font-size: $font-size-base;
+            padding: $padding-btn-vertical $padding-round-horizontal;
+            line-height: $line-height-general;
+
+            &:hover {
+                background-color: $transparent-bg;
+            }
+
+            &.active{
+                border: 1px solid $secondary-color;
+                border-radius: 30px;
+            }
+
+            i.now-ui-icons{
+                font-size: 14px;
+                position: relative;
+                top: 1px;
+                margin-right: 3px;
+            }
+        }
+
+        &.disabled > .nav-link,
+        &.disabled > .nav-link:hover {
+            color: rgba(255,255,255,0.5);
+        }
+    }
+
+    &.nav-tabs-neutral{
+        > .nav-item{
+            > .nav-link{
+                color: $white;
+
+                &.active{
+                    border-color: $opacity-5;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &.nav-tabs-primary{
+      background-color: $primary-color;
+        > .nav-item{
+            > .nav-link{
+                color: $white;
+                background-color:$primary-color;
+                &.active{
+                  background-color:$white;
+                  color: $primary-color;
+                }
+            }
+        }
+    }
+
+  &.nav-tabs-secondary{
+    background-color: $secondary-color;
+    > .nav-item{
+      > .nav-link{
+        color: $white;
+        background-color:$secondary-color;
+        &.active{
+          background-color:$white;
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+
+
+  &.nav-tabs-info{
+        > .nav-item{
+            > .nav-link{
+                &.active{
+                    border-color: $info-color;
+                    color: $info-color;
+                }
+            }
+        }
+    }
+
+    &.nav-tabs-danger{
+        > .nav-item{
+            > .nav-link{
+                &.active{
+                    border-color: $danger-color;
+                    color: $danger-color;
+                }
+            }
+        }
+    }
+
+    &.nav-tabs-warning{
+        > .nav-item{
+            > .nav-link{
+                &.active{
+                    border-color: $warning-color;
+                    color: $warning-color;
+                }
+            }
+        }
+    }
+
+    &.nav-tabs-success{
+        > .nav-item{
+            > .nav-link{
+                &.active{
+                    border-color: $success-color;
+                    color: $success-color;
+                }
+            }
+        }
+    }
+
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  text-align:left;
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
+

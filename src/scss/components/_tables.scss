@@ -1,0 +1,351 @@
+//
+// Basic Bootstrap table
+//
+
+.table {
+  width: 100%;
+  max-width: 100%;
+
+  background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+
+  th,
+  td {
+    padding: $table-cell-padding;
+    vertical-align: top;
+    border-top: $table-border-width solid $table-border-color;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: (2 * $table-border-width) solid $table-border-color;
+  }
+
+  tbody + tbody {
+    border-top: (2 * $table-border-width) solid $table-border-color;
+  }
+
+  .table {
+    background-color: $body-bg;
+  }
+}
+
+th {height:28px !important;}
+//
+// Condensed table w/ half padding
+//
+
+.table-sm {
+  th,
+  td {
+    padding: $table-cell-padding-sm;
+  }
+}
+
+
+// Bordered version
+//
+// Add borders all around the table and between all the columns.
+
+.table-bordered {
+  border: $table-border-width solid $table-border-color;
+
+  th,
+  td {
+    border: $table-border-width solid $table-border-color;
+  }
+
+  thead {
+    th,
+    td {
+      border-bottom-width: (2 * $table-border-width);
+    }
+  }
+}
+
+
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+.table-striped {
+  tbody tr:nth-of-type(odd) {
+    background-color: $table-accent-bg;
+  }
+}
+
+
+// Hover effect
+//
+// Placed here since it has to come after the potential zebra striping
+
+//.table-hover {
+//  tbody tr {
+//    @include hover {
+//      background-color: $table-hover-bg;
+//    }
+//  }
+//}
+
+
+// Table backgrounds
+//
+// Exact selectors below required to override `.table-striped` and prevent
+// inheritance to nested tables.
+
+//@each $color, $value in $theme-colors {
+//  @include table-row-variant($color, theme-color-level($color, -9));
+//}
+
+//@include table-row-variant(active, $table-active-bg);
+
+
+// Dark styles
+//
+// Same table markup, but inverted color scheme: dark background and light text.
+
+// stylelint-disable-next-line no-duplicate-selectors
+.table {
+  .thead-dark {
+    th {
+      color: $table-dark-color;
+      background-color: $table-dark-bg;
+      border-color: $table-dark-border-color;
+    }
+  }
+
+  .thead-light {
+    th {
+      color: $table-head-color;
+      background-color: $table-head-bg;
+      border-color: $table-border-color;
+    }
+  }
+}
+
+.table-dark {
+  color: $table-dark-color;
+  background-color: $table-dark-bg;
+
+  th,
+  td,
+  thead th {
+    border-color: $table-dark-border-color;
+  }
+
+  &.table-bordered {
+    border: 0;
+  }
+
+  &.table-striped {
+    tbody tr:nth-of-type(odd) {
+      background-color: $table-dark-accent-bg;
+    }
+  }
+}
+
+/* filter-table specific styling */
+table {
+  width: 100%;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  background: #fff;
+
+}
+
+th {
+  font-weight: 500;
+  color: #fff;
+  background-color: $th-bg-color;
+}
+
+td {
+  border-bottom: 1px solid #ccc;
+  line-height: 2em;
+}
+
+td, th {
+  padding: 0 10px;
+  font-size: 13px;
+  min-height: 1.25em;
+}
+
+tbody tr:nth-child(even) {
+  background: rgb(240, 240, 240);
+}
+
+/* Table Sorting */
+th.table-sort {
+  padding-right: 36px;
+  text-align: left;
+  cursor: pointer;
+  min-height: 1.25em;
+  line-height: 32px;
+}
+
+th.table-sort:hover {
+  background-image: -webkit-linear-gradient(bottom, $th-bg-hover-color, $th-bg-color);
+  background-image: -moz-linear-gradient(bottom, $th-bg-hover-color, $th-bg-color);
+  background-image: -ms-linear-gradient(bottom, $th-bg-hover-color, $th-bg-color);
+  background-image: linear-gradient(bottom, $th-bg-hover-color, $th-bg-color);
+}
+
+.table-sort-field {
+  position: relative;
+  height: 26px;
+  padding-top: 4px;
+}
+
+.table-sort-control {
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.0));
+  height: 32px;
+  width: 16px;
+  position: absolute;
+  top: -6px;
+  right: -36px;
+}
+
+.table-sort-up,
+.table-sort-down {
+  border: 3px solid transparent;
+  position: absolute;
+  right: 6px;
+}
+
+.table-sort-up {
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+  top: 8px;
+}
+
+.table-sort-down {
+  border-top-color: rgba(255, 255, 255, 0.3);
+  top: 19px;
+}
+
+.table-sort-order-asc .table-sort-up {
+  border-bottom-color: rgba(255, 255, 255, 1);
+}
+
+.table-sort-order-des .table-sort-down {
+  border-top-color: rgba(255, 255, 255, 1);
+}
+
+.table-sort-highlight {
+  color: #fff;
+  background: #aeaeae;
+}
+
+h4.filter-table {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+input[type=search] {
+  position: absolute;
+  margin-left: 66px;
+  margin-top: -24px;
+  height: 28px;
+}
+
+td.alt {
+  background-color: #ffc;
+  background-color: rgba(255, 255, 0, 0.2);
+}
+
+/* responsive tables
+----------------------------------------------------------*/
+@media only screen and (max-width: 800px) {
+
+  #flip-scroll .cf:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+
+  #flip-scroll * html .cf {
+    zoom: 1;
+  }
+
+  #flip-scroll *:first-child+html .cf {
+    zoom: 1;
+  }
+
+  #flip-scroll table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  #flip-scroll th,
+  #flip-scroll td {
+    margin: 0;
+    vertical-align: top;
+  }
+
+  #flip-scroll th {
+    text-align: left;
+  }
+
+  #flip-scroll table {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  #flip-scroll thead {
+    display: block;
+    float: left;
+  }
+
+  #flip-scroll tbody {
+    display: block;
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  #flip-scroll thead tr {
+    display: block;
+  }
+
+  #flip-scroll th {
+    display: block;
+    text-align: right;
+  }
+
+  #flip-scroll tbody tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  #flip-scroll td {
+    display: block;
+    min-height: 1.25em;
+    text-align: left;
+  }
+
+/* sort out borders */
+
+  #flip-scroll th {
+    border-bottom: 0;
+    border-left: 0;
+  }
+
+  #flip-scroll td {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+  }
+
+  #flip-scroll tbody tr {
+    border-left: 1px solid #babcbf;
+  }
+
+  #flip-scroll th:last-child,
+  #flip-scroll td:last-child {
+    border-bottom: 1px solid #babcbf;
+  }
+}

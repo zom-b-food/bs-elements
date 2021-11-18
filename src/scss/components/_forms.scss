@@ -1,0 +1,1086 @@
+@include form-control-placeholder($medium-gray, 1);
+
+.form-control {
+  background-color: $transparent-bg;
+  border: 1px solid $light-gray;
+  border-radius: $btn-curved-radius;
+  color: $black;
+  line-height: normal;
+  font-size: $font-size-small;
+  @include transition-input-focus-color();
+  @include box-shadow(none);
+
+  .has-success &{
+    border-color: $light-gray;
+  }
+
+  &:focus{
+    border: 1px solid $primary-color;
+    @include box-shadow(none);
+    outline: 0 !important;
+    color: $black;
+
+    & + .input-group-addon,
+    & ~ .input-group-addon{
+      border: 1px solid $primary-color;
+      border-left: none;
+      background-color: $transparent-bg;
+    }
+  }
+
+  .has-success &,
+  .has-error &,
+  .has-success &:focus,
+  .has-error &:focus{
+    @include box-shadow(none);
+  }
+
+  .has-success &:focus{
+    border-color: lighten($success-color, 5%);
+  }
+
+
+  .has-danger &,
+  .has-success &{
+    &.form-control-success,
+    &.form-control-danger{
+      background-image: none;
+    }
+  }
+
+  .has-danger &{
+    border-color: lighten($danger-color, 30%);
+    color: $danger-color;
+    background-color: rgba(222,222,222, .1);
+
+    &:focus{
+      background-color: $white;
+    }
+  }
+
+  & + .form-control-feedback{
+    border-radius: $border-radius-large;
+    font-size: $font-size-base;
+    margin-top: 0;
+    position: absolute;
+    left: 18px;
+    bottom: -20px;
+    vertical-align: middle;
+  }
+
+  .open &{
+    border-radius: $border-radius-large $border-radius-large 0 0;
+    border-bottom-color: transparent;
+  }
+
+  & + .input-group-addon{
+    background-color: $white-bg;
+  }
+}
+
+.has-success,
+.has-danger{
+  &:after{
+    font-family: 'Nucleo Outline';
+    content: "\ea22";
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    color: $success-color;
+    font-size: 11px;
+  }
+
+  &.input-lg{
+    &:after{
+      font-size: 13px;
+      top: 13px;
+    }
+  }
+}
+
+.has-danger{
+  &:after{
+    content: "\ea53";
+    color: $danger-color;
+  }
+}
+
+@include input-lg-padding($padding-large-vertical, $padding-input-horizontal);
+@include input-base-padding($padding-input-vertical, $padding-input-horizontal);
+
+.form-group.form-group-no-border,
+.input-group.form-group-no-border{
+  .form-control,
+  .form-control + .input-group-addon{
+    background-color: $opacity-gray-3;
+    border: medium none;
+    &:focus,
+    &:active,
+    &:active{
+      border: medium none;
+      background-color: $opacity-gray-5;
+    }
+  }
+
+  .form-control{
+    &:focus{
+      & + .input-group-addon{
+        background-color: $opacity-gray-5;
+      }
+    }
+  }
+
+  .input-group-addon{
+    background-color: $opacity-gray-3;
+    border: none;
+  }
+}
+
+.has-error{
+  .form-control-feedback, .control-label{
+    color: $danger-color;
+  }
+}
+.has-success{
+  .form-control-feedback, .control-label{
+    color: $success-color;
+  }
+}
+
+.input-group-addon {
+  background-color: $white-bg;
+  border: 1px solid $light-gray;
+  // border-radius: $btn-curved-radius;
+  color: $dark-background;
+  padding: 5px 10px 5px 10px;
+
+  @include transition-input-focus-color();
+
+  .has-success &,
+  .has-danger &{
+    background-color: $white;
+  }
+  .has-danger .form-control:focus + &{
+    color: $danger-color;
+  }
+  .has-success .form-control:focus + &{
+    color: $success-color;
+  }
+
+  & + .form-control,
+  & ~ .form-control{
+    @include input-size($padding-base-vertical - 1, $padding-base-horizontal);
+    padding-left: 18px;
+  }
+
+  i{
+    width: 17px;
+  }
+}
+
+.input-group-focus{
+  .input-group-addon{
+    background-color: $white-bg;
+    border-color: $primary-color;
+  }
+
+  &.form-group-no-border{
+    .input-group-addon{
+      background-color: $opacity-gray-5;
+    }
+  }
+}
+
+.input-group,
+.form-group{
+  margin-bottom: 10px;
+}
+.input-group[disabled]{
+  .input-group-addon{
+    background-color: $light-gray;
+  }
+}
+.input-group .form-control:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child > .dropdown-toggle,
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+  border-right: 0 none;
+}
+.input-group .form-control:last-child,
+.input-group-addon:last-child,
+.input-group-btn:last-child > .dropdown-toggle,
+.input-group-btn:first-child > .btn:not(:first-child) {
+  border-left: 0 none;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  background-color: $light-gray;
+  color: $default-color;
+  cursor: not-allowed;
+}
+
+.input-group-btn .btn{
+  border-width: $border-thin;
+  padding: $padding-btn-vertical  $padding-base-horizontal;
+}
+.input-group-btn .btn-default:not(.btn-fill){
+  border-color: $medium-gray;
+}
+
+.input-group-btn:last-child > .btn{
+  margin-left: 0;
+}
+textarea.form-control{
+  max-width: 100%;
+  padding: 10px 10px 0 0;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid $light-gray;
+  border-radius: 0;
+  line-height: 2;
+
+  &:focus,
+  &:active{
+    border-left: none;
+    border-top: none;
+    border-right: none;
+  }
+}
+
+.has-success,
+.has-danger{
+
+  &.form-group .form-control,
+  &.form-group.form-group-no-border .form-control{
+    padding-right: $padding-input-horizontal + 21;
+  }
+}
+
+.form-group{
+  position:relative;
+}
+.form-group.has-error, .form-group.has-danger{
+  margin-bottom: 20px;
+}
+
+
+/* -- Inputs -- */
+input[type="text"],
+input[type="search"],
+input[type="password"]{
+  background: #fff; /*fallback for non-CSS3 browsers*/
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#eee) to(#fff)); /*old webkit*/
+  background: -webkit-linear-gradient(#eee, #fff); /*new webkit*/
+  background: -moz-linear-gradient(#eee, #fff); /*gecko*/
+  background: -ms-linear-gradient(#eeeeee, #ffffff); /*IE10*/
+  background: -o-linear-gradient(#eee, #fff); /*opera 11.10+*/
+  background: linear-gradient(#eee, #fff); /*future CSS3 browsers*/
+  -pie-background: linear-gradient(#eee, #fff); /*PIE*/
+  border:1px solid $light-gray;
+  color: #666;
+  position:relative;
+  z-index: 0;
+  display: block;
+  vertical-align: middle;
+  border-radius: $btn-curved-radius;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+:root input[type="text"],
+:root input[type="password"] {
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#ffffff')" ;
+} /* IE9 + IE10pp4 */
+
+textarea {
+  background: #fff; /*fallback for non-CSS3 browsers*/
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#eee) to(#fff)); /*old webkit*/
+  background: -webkit-linear-gradient(#eee, #fff); /*new webkit*/
+  background: -moz-linear-gradient(#eee, #fff); /*gecko*/
+  background: -ms-linear-gradient(#eee, #fff); /*IE10*/
+  background: -o-linear-gradient(#eee, #fff); /*opera 11.10+*/
+  background: linear-gradient(#eee, #fff); /*future CSS3 browsers*/
+  border:1px solid $light-gray;
+  border-radius:$btn-curved-radius;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  color: #a7a7b4 !important;
+  position:relative;
+  z-index: 0;
+  width: 97%;
+  height: 85px;
+}
+
+textarea:focus {
+  color: #000000 !important;
+}
+
+
+:root textarea {
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#ffffff')" ;
+} /* IE9 + IE10pp4 */
+
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus{
+  border-color:$light-gray;
+  -moz-box-shadow:0 0 2px #a1bac3;
+  -webkit-box-shadow:0 0 2px #a1bac3;
+  outline:none;
+  color: #222;
+  position:relative;
+  z-index: 0;
+}
+
+input[type="submit"],
+input[type="button"] {
+  width: auto;
+  margin-top:10px;
+  border:1px solid $light-gray;
+  border-radius: $btn-curved-radius;
+  box-shadow: 1px 1px 1px #649eb4;
+  background: linear-gradient(#eef7fa, #649eb4) repeat scroll 0% 0% transparent;
+  padding: 2px 10px;
+  color: #000;
+  font-weight: 300;
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+
+  //border: 1px solid #5ab5d7;
+  background: linear-gradient(#649eb4, #eef7fa) repeat scroll 0% 0% transparent;
+}
+
+
+input.disabled, input.disabled:hover {
+  cursor: default;
+  width: auto;
+  margin-top:10px;
+  border:1px solid $light-gray;
+  border-radius: $btn-curved-radius;
+  box-shadow: 1px 1px 1px #649eb4;
+  background: linear-gradient(#4d4d4d, #4d4d4d) repeat scroll 0% 0% transparent;
+  padding: 2px 10px;
+  color: #000;
+  font-weight: 300;
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+}
+
+
+select {
+  color: #4d4d4d;
+  padding: 3px;
+  margin-left: 1px;
+  border:1px solid $light-gray;
+  outline:none;
+}
+
+#emailError {color:red;}
+
+// stylelint-disable selector-no-qualifying-type
+
+// Make the div behave like a button
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle; // match .btn alignment given font-size hack above
+
+  > .btn {
+    position: relative;
+    flex: 0 1 auto;
+
+    // Bring the hover, focused, and "active" buttons to the front to overlay
+    // the borders properly
+
+    &:focus,
+    &:active,
+    &.active {
+      z-index: 2;
+    }
+  }
+
+  // Prevent double borders when buttons are next to each other
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-left: -$input-btn-border-width;
+  }
+}
+
+// Optional: Group multiple button groups together for a toolbar
+.btn-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .input-group {
+    width: auto;
+  }
+}
+
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0;
+}
+
+// Set corners individual because sometimes a single button can be in a .btn-group
+// and we need :first-child and :last-child to both match
+.btn-group > .btn:first-child {
+  margin-left: 0;
+
+
+}
+// Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu
+// immediately after it
+.btn-group > .btn:last-child:not(:first-child),
+.btn-group > .dropdown-toggle:not(:first-child) {
+
+}
+
+// Custom edits for including btn-groups within btn-groups (useful for including
+// dropdown buttons within a btn-group)
+.btn-group > .btn-group {
+  float: left;
+}
+
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0;
+}
+
+.btn-group > .btn-group:first-child:not(:last-child) {
+  > .btn:last-child,
+  > .dropdown-toggle {
+
+  }
+}
+
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
+
+}
+
+
+// Sizing
+//
+// Remix the default button sizing classes into new ones for easier manipulation.
+
+.btn-group-sm > .btn { @extend .btn-sm; }
+.btn-group-lg > .btn { @extend .btn-lg; }
+
+
+//
+// Split button dropdowns
+//
+
+.btn + .dropdown-toggle-split {
+  padding-right: $input-btn-padding-x * .75;
+  padding-left: $input-btn-padding-x * .75;
+
+  &::after {
+    margin-left: 0;
+  }
+}
+
+.btn-sm + .dropdown-toggle-split {
+  padding-right: $input-btn-padding-x-sm * .75;
+  padding-left: $input-btn-padding-x-sm * .75;
+}
+
+.btn-lg + .dropdown-toggle-split {
+  padding-right: $input-btn-padding-x-lg * .75;
+  padding-left: $input-btn-padding-x-lg * .75;
+}
+
+
+// The clickable button for toggling the menu
+// Set the same inset shadow as the :active state
+.btn-group.show .dropdown-toggle {
+  @include box-shadow($btn-active-box-shadow);
+
+  // Show no shadow for `.btn-link` since it has no other button styles.
+  &.btn-link {
+    @include box-shadow(none);
+  }
+}
+
+
+//
+// Vertical button groups
+//
+
+.btn-group-vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  .btn,
+  .btn-group {
+    width: 100%;
+  }
+
+  > .btn + .btn,
+  > .btn + .btn-group,
+  > .btn-group + .btn,
+  > .btn-group + .btn-group {
+    margin-top: -$input-btn-border-width;
+    margin-left: 0;
+  }
+
+  > .btn {
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+
+    &:first-child:not(:last-child) {
+
+    }
+
+    &:last-child:not(:first-child) {
+
+    }
+  }
+
+  > .btn-group:not(:first-child):not(:last-child) > .btn {
+    border-radius: 0;
+  }
+
+  > .btn-group:first-child:not(:last-child) {
+    > .btn:last-child,
+    > .dropdown-toggle {
+
+    }
+  }
+
+  > .btn-group:last-child:not(:first-child) > .btn:first-child {
+
+  }
+}
+
+
+// Checkbox and radio options
+//
+// In order to support the browser's form validation feedback, powered by the
+// `required` attribute, we have to "hide" the inputs via `clip`. We cannot use
+// `display: none;` or `visibility: hidden;` as that also hides the popover.
+// Simply visually hiding the inputs via `opacity` would leave them clickable in
+// certain cases which is prevented by using `clip` and `pointer-events`.
+// This way, we ensure a DOM element is visible to position the popover from.
+//
+// See https://github.com/twbs/bootstrap/pull/12794 and
+// https://github.com/twbs/bootstrap/pull/14559 for more information.
+
+[data-toggle="buttons"] {
+  > .btn,
+  > .btn-group > .btn {
+    input[type="radio"],
+    input[type="checkbox"] {
+      position: absolute;
+      clip: rect(0,0,0,0);
+      pointer-events: none;
+    }
+  }
+}
+
+
+
+.btn,
+.navbar .navbar-nav > a.btn{
+  border-width: $border-thick;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-small;
+  line-height: $line-height;
+  margin: 5px 1px;
+  border: none;
+  border-radius: $border-radius-small;
+  padding: $padding-btn-vertical $padding-btn-horizontal;
+  cursor: pointer;
+
+  @include btn-styles($default-color, $default-states-color);
+
+  &:hover,
+  &:focus{
+    @include opacity(1);
+    outline: 0 !important;
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    @include box-shadow(none);
+    outline: 0 !important;
+  }
+
+  &.btn-icon {
+    // see above for color variations
+    height: $btn-icon-size-regular;
+    min-width: $btn-icon-size-regular;
+    width: $btn-icon-size-regular;
+    padding: 0;
+    font-size: $btn-icon-font-size-regular;
+    overflow: hidden;
+    position: relative;
+    line-height: normal;
+
+    &.btn-simple{
+      padding: 0;
+    }
+
+    &.btn-sm{
+      height: $btn-icon-size-small;
+      min-width: $btn-icon-size-small;
+      width: $btn-icon-size-small;
+
+      i.fa,
+      i.now-ui-icons{
+        font-size: $btn-icon-font-size-small;
+      }
+    }
+
+    &.btn-lg{
+      height: $btn-icon-size-lg;
+      min-width: $btn-icon-size-lg;
+      width: $btn-icon-size-lg;
+
+      i.now-ui-icons,
+      i.fa{
+        font-size: $btn-icon-font-size-lg;
+      }
+    }
+
+    &:not(.btn-footer) i.now-ui-icons,
+    &:not(.btn-footer) i.fa{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-12px, -12px);
+      line-height: 1.5626rem;
+      width: 25px;
+    }
+
+  }
+
+  &:not(.btn-icon) .now-ui-icons{
+    position: relative;
+    top: 1px;
+  }
+}
+
+// Apply the mixin to the buttons
+// .btn-default { @include btn-styles($default-color, $default-states-color); }
+.btn-primary { @include btn-styles($primary-color, $primary-states-color); }
+
+.btn-secondary { @include btn-styles($secondary-color, $secondary-states-color); }
+.btn-tertiary { @include btn-styles($tertiary-color, $tertiary-states-color); }
+
+.btn-success { @include btn-styles($success-color, $success-states-color); }
+.btn-info    { @include btn-styles($info-color, $info-states-color); }
+.btn-warning { @include btn-styles($warning-color, $warning-states-color); }
+.btn-danger  { @include btn-styles($danger-color, $danger-states-color); }
+.btn-neutral { @include btn-styles($white, $white); }
+
+.btn{
+  &:disabled,
+  &[disabled],
+  &.disabled{
+    @include opacity(.5);
+  }
+}
+.btn-curved {
+  border-width: $border-thin;
+  border-radius: $btn-curved-radius !important;
+  padding: $padding-btn-vertical  $padding-round-horizontal;
+}
+.btn-round{
+  border-width: $border-thin;
+  border-radius: $btn-round-radius !important;
+  padding: $padding-btn-vertical  $padding-round-horizontal;
+
+  &.btn-simple{
+    padding: $padding-btn-vertical - 1  $padding-round-horizontal - 1;
+  }
+}
+.btn-simple{
+  border: $border;
+  border-color: $default-color;
+  padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
+  background-color: $transparent-bg;
+}
+
+.btn-simple,
+.btn-link{
+  &.disabled,
+  &:disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: $transparent-bg;
+    }
+  }
+}
+
+.btn-lg{
+  @include btn-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $border-radius-large);
+}
+.btn-sm{
+  @include btn-size($padding-small-vertical, $padding-small-horizontal, $font-size-base, $border-radius-small);
+}
+
+.btn-link{
+  border: $none;
+  padding: $padding-base-vertical $padding-base-horizontal;
+  background-color: $transparent-bg;
+}
+
+.btn-wd {
+  min-width: 140px;
+}
+.btn-group.select{
+  width: 100%;
+}
+.btn-group.select .btn{
+  text-align: left;
+}
+.btn-group.select .caret{
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  right: 8px;
+}
+
+.close {
+  float: right;
+  font-size: $close-font-size;
+  font-weight: $close-font-weight;
+  line-height: 1;
+  color: $close-color;
+  text-shadow: $close-text-shadow;
+  opacity: .5;
+
+}
+
+// Additional properties for button version
+// iOS requires the button element instead of an anchor tag.
+// If you want the anchor version, it requires `href="#"`.
+// See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+
+// stylelint-disable property-no-vendor-prefix, selector-no-qualifying-type
+button.close {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+// stylelint-enable
+@mixin gradient-bg($top, $bottom){
+  background: $top; /* Old browsers */
+  background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+.checkbox,
+.radio {
+  margin-bottom: 12px;
+}
+
+.checkbox label,
+.radio label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 35px;
+  line-height: 26px;
+  margin-bottom: 0;
+}
+.radio label{
+  padding-left: 28px;
+}
+
+.checkbox label::before,
+.checkbox label::after{
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 0;
+  cursor: pointer;
+  border-radius: 3px;
+  top: 0;
+  background-color: transparent;
+  border: 1px solid $light-gray;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  -ms-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+
+.checkbox label::after{
+  font-family: 'Nucleo Outline';
+  content: "\ea22";
+  top: 0px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0;
+  color: $dark-background;
+  border: 0;
+  background-color: inherit;
+}
+
+.checkbox input[type="checkbox"],
+.radio input[type="radio"]{
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+}
+.checkbox input[type="checkbox"]:checked + label::after{
+  opacity: 1;
+}
+
+.checkbox input[type="checkbox"]:disabled + label,
+.radio input[type="radio"]:disabled + label  {
+  color: $dark-gray;
+  opacity: .5;
+}
+
+.checkbox input[type="checkbox"]:disabled + label::before,
+.checkbox input[type="checkbox"]:disabled + label::after{
+  cursor: not-allowed;
+}
+
+.checkbox input[type="checkbox"]:disabled + label,
+.radio input[type="radio"]:disabled + label{
+  cursor: not-allowed;
+}
+
+.checkbox.checkbox-circle label::before {
+  border-radius: 50%;
+}
+
+.checkbox.checkbox-inline {
+  margin-top: 0;
+}
+
+.checkbox-primary input[type="checkbox"]:checked + label::before {
+  background-color: #428bca;
+  border-color: #428bca;
+}
+
+.checkbox-primary input[type="checkbox"]:checked + label::after {
+  color: #fff;
+}
+
+.checkbox-danger input[type="checkbox"]:checked + label::before {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.checkbox-danger input[type="checkbox"]:checked + label::after {
+  color: #fff;
+}
+
+.checkbox-info input[type="checkbox"]:checked + label::before {
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+
+.checkbox-info input[type="checkbox"]:checked + label::after {
+  color: #fff;
+}
+
+.checkbox-warning input[type="checkbox"]:checked + label::before {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+.checkbox-warning input[type="checkbox"]:checked + label::after {
+  color: #fff;
+}
+
+.checkbox-success input[type="checkbox"]:checked + label::before {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+.checkbox-success input[type="checkbox"]:checked + label::after {
+  color: #fff;
+}
+
+.radio label::before,
+.radio label::after{
+  content: " ";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid $light-gray;
+  display: inline-block;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  padding: 1px;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  -ms-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+
+.radio input[type="radio"] + label:after,
+.radio input[type="radio"] {
+  opacity: 0;
+}
+.radio input[type="radio"]:checked + label::after {
+  width: 4px;
+  height: 4px;
+  background-color: $dark-background;
+  border-color: $dark-background;
+  top: 11px;
+  left: 11px;
+  opacity: 1;
+}
+
+.radio input[type="radio"]:checked + label::after{
+  opacity: 1;
+}
+
+.radio input[type="radio"]:disabled + label {
+  color: $dark-gray;
+}
+
+.radio input[type="radio"]:disabled + label::before,
+.radio input[type="radio"]:disabled + label::after {
+  color: $dark-gray;
+}
+
+.radio.radio-inline {
+  margin-top: 0;
+}
+
+.dropdown-menu{
+  border: 0;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.2);
+  border-radius: $border-radius-extra-small;
+  @include transition($fast-transition-time, $transition-linear);
+  font-size: $font-size-base;
+
+  &.dropdown-menu-right{
+    &:before{
+      left:auto;
+      right: 10px;
+    }
+  }
+
+  &:before{
+    display: inline-block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    content: "";
+    top: -5px;
+    left: 10px;
+    right: auto;
+    color: $white;
+    border-bottom: .4em solid;
+    border-right: .4em solid transparent;
+    border-left: .4em solid transparent;
+  }
+
+  .dropdown-item{
+    font-size: $font-size-small;
+    padding-top: $padding-base-vertical;
+    padding-bottom: $padding-base-vertical;
+    @include transition($fast-transition-time, $transition-linear);
+
+    &:hover,
+    &:focus{
+      background-color: $opacity-gray-3;
+    }
+  }
+
+  .dropdown-divider{
+    background-color: $opacity-gray-5;
+  }
+
+  .dropdown-header:not([href]):not([tabindex]){
+    color: $default-color-opacity;
+    font-size: $font-size-mini;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+  }
+
+  &.dropdown-primary{
+    @include dropdown-colors(darken($primary-color, 3%),$opacity-8,$white, $opacity-2);
+  }
+
+  &.dropdown-info{
+    @include dropdown-colors(darken($info-color, 3%),$opacity-8,$white, $opacity-2);
+  }
+
+  &.dropdown-danger{
+    @include dropdown-colors(darken($danger-color, 3%),$opacity-8,$white, $opacity-2);
+  }
+
+  &.dropdown-success{
+    @include dropdown-colors(darken($success-color, 3%),$opacity-8,$white, $opacity-2);
+  }
+
+  &.dropdown-warning{
+    @include dropdown-colors(darken($warning-color, 3%),$opacity-8,$white, $opacity-2);
+  }
+
+  .dropdown &{
+    @include transform-translate-y(-25px);
+    visibility: hidden;
+    display: block;
+    @include opacity(0);
+  }
+
+  .dropdown.show &,
+  &.open{
+    @include opacity(1);
+    visibility: visible;
+    @include transform-translate-y(0px);
+  }
+
+  .navbar .dropdown.show &{
+    @include transform-translate-y(7px);
+  }
+}
+
+.button-dropdown{
+  padding-right: $padding-base-horizontal;
+  cursor: pointer;
+
+  & .dropdown-toggle{
+    padding-top: $padding-base-vertical;
+    padding-bottom: $padding-base-vertical;
+    display: block;
+
+    &:after{
+      display: none;
+    }
+  }
+}
+
+.form-group .form-control+.input-group-addon, .input-group .form-control+.input-group-addon {
+  padding: 5px 10px 5px 10px;
+}
