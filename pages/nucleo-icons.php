@@ -3,7 +3,7 @@
 
 <head>
     <?php include '../pages/inc/globals-top.php'; ?>
-<link rel="stylesheet" href="/dist/css/now-ui-kit.css"/>
+<link rel="stylesheet" href="../dist/css/now-ui-kit.css"/>
     <title>Nucleo Outline Web Font</title>
 
 

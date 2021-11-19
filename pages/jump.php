@@ -140,19 +140,19 @@
                                             <h4>Generic Page/Component Templates</h4>
                                             <ul>
                                                 <li>
-                                                    <a href="/pages/album.php">Album</a>
+                                                    <a href="../pages/album.php">Album</a>
                                                 </li>
                                                 <li>
-                                                    <a href="/pages/blog.php">Blog</a>
+                                                    <a href="../pages/blog.php">Blog</a>
                                                 </li>
                                                 <li>
-                                                    <a href="/pages/carousel.php">Carousel</a>
+                                                    <a href="../pages/carousel.php">Carousel</a>
                                                 </li>
                                                 <li>
-                                                    <a href="/pages/offcanvas.php">Offcanvas (sidebar)</a>
+                                                    <a href="../pages/offcanvas.php">Offcanvas (sidebar)</a>
                                                 </li>
                                                 <li>
-                                                    <a href="/pages/grid.php">Grid</a>
+                                                    <a href="../pages/grid.php">Grid</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -160,20 +160,20 @@
                                             <h4>...More</h4>
                                             <ul>
                                                 <li>
-                                                    <a href="/pages/justified-nav.php">Justified Nav</a>
+                                                    <a href="../pages/justified-nav.php">Justified Nav</a>
                                                 </li>
                                                 <li>
-                                                    <a href="/pages/navbars.php">Navbars</a>
+                                                    <a href="../pages/navbars.php">Navbars</a>
                                                 </li>
                                                 <li>
-                                                    <a href="/pages/signin.php">Sign-in</a>
+                                                    <a href="../pages/signin.php">Sign-in</a>
                                                 </li>
                                                 <li>
-                                                    <a href="/pages/starter-template.php">Starter
+                                                    <a href="../pages/starter-template.php">Starter
                                                         Template</a>
                                                 </li>
                                                 <li>
-                                                    <a href="/pages/sticky-footer.php">Sticky Footer</a>
+                                                    <a href="../pages/sticky-footer.php">Sticky Footer</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -199,35 +199,35 @@
                             <h4>Stock BS-4 Templates</h4>
                             <ul>
                                 <li>
-                                    <a href="/pages/album.php">Album</a>
+                                    <a href="../pages/album.php">Album</a>
                                 </li>
                                 <li>
-                                    <a href="/pages/blog.php">Blog</a>
+                                    <a href="../pages/blog.php">Blog</a>
                                 </li>
                                 <li>
-                                    <a href="/pages/carousel.php">Carousel</a>
+                                    <a href="../pages/carousel.php">Carousel</a>
                                 </li>
                                 <li>
-                                    <a href="/pages/offcanvas.php">Offcanvas (sidebar)</a>
+                                    <a href="../pages/offcanvas.php">Offcanvas (sidebar)</a>
                                 </li>
                                 <li>
-                                    <a href="/pages/grid.php">Grid</a>
+                                    <a href="../pages/grid.php">Grid</a>
                                 </li>
                                 <li>
-                                    <a href="/pages/justified-nav.php">Justified Nav</a>
+                                    <a href="../pages/justified-nav.php">Justified Nav</a>
                                 </li>
                                 <li>
-                                    <a href="/pages/navbars.php">Navbars</a>
+                                    <a href="../pages/navbars.php">Navbars</a>
                                 </li>
                                 <li>
-                                    <a href="/pages/signin.php">Sign-in</a>
+                                    <a href="../pages/signin.php">Sign-in</a>
                                 </li>
                                 <li>
-                                    <a href="/pages/starter-template.php">Starter
+                                    <a href="../pages/starter-template.php">Starter
                                         Template</a>
                                 </li>
                                 <li>
-                                    <a href="/pages/sticky-footer.php">Sticky Footer</a>
+                                    <a href="../pages/sticky-footer.php">Sticky Footer</a>
                                 </li>
                             </ul>
                         </div>
@@ -280,9 +280,9 @@
                     <hr />
                     <p class="category">bxSlider</p>
                     <div class="bxslider">
-                        <div><img src="/dist/img/bg1.jpg" title="Hand On the Hammock"></div>
-                        <div><img src="/dist/img/bg4.jpg" title="Up On the Roof"></div>
-                        <div><img src="/dist/img/bg5.jpg" title="The Chinese Dragon"></div>
+                        <div><img src="../dist/img/bg1.jpg" title="Hand On the Hammock"></div>
+                        <div><img src="../dist/img/bg4.jpg" title="Up On the Roof"></div>
+                        <div><img src="../dist/img/bg5.jpg" title="The Chinese Dragon"></div>
                     </div>
                     <script>
                     $(function() {
@@ -366,19 +366,19 @@
             <div class="row">
                 <div class="col-sm-2">
                     <p class="category">Image</p>
-                    <img src="/dist/img/avatar.jpg" alt="Rounded Image" class="rounded">
+                    <img src="../dist/img/avatar.jpg" alt="Rounded Image" class="rounded">
                 </div>
                 <div class="col-sm-2">
                     <p class="category">Circle Image</p>
-                    <img src="/dist/img/avatar.jpg" alt="Circle Image" class="rounded-circle">
+                    <img src="../dist/img/avatar.jpg" alt="Circle Image" class="rounded-circle">
                 </div>
                 <div class="col-sm-2">
                     <p class="category">Raised</p>
-                    <img src="/dist/img/avatar.jpg" alt="Raised Image" class="rounded img-raised">
+                    <img src="../dist/img/avatar.jpg" alt="Raised Image" class="rounded img-raised">
                 </div>
                 <div class="col-sm-2">
                     <p class="category">Circle Raised</p>
-                    <img src="/dist/img/avatar.jpg" alt="Thumbnail Image" class="rounded-circle img-raised">
+                    <img src="../dist/img/avatar.jpg" alt="Thumbnail Image" class="rounded-circle img-raised">
                 </div>
             </div>
         </section>

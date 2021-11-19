@@ -1,39 +1,39 @@
 <div class="se-pre-con"></div>
 <script>
-    //paste this code under head tag or in a seperate js file.
-    // Wait for window load
-    $(window).load(function() {
-        // Animate loader off screen
-        $(".se-pre-con").fadeOut("slow");;
-    });
+//paste this code under head tag or in a seperate js file.
+// Wait for window load
+$(window).load(function() {
+    // Animate loader off screen
+    $(".se-pre-con").fadeOut("slow");;
+});
 </script>
 <style type="text/css">
-    @media screen and (min-width: 572px) {
-        .onlysmall {
-            display: none;
-        }
+@media screen and (min-width: 572px) {
+    .onlysmall {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 571px) {
+    .onlysmall {
+        display: block;
+        border: 1px solid rgba(2, 109, 14, 0.3) !important;
+        border-radius: 2px;
+        padding: 0 30px;
+        margin-bottom: 20px;
+        background: rgba(4, 133, 125, 0.3) !important;
+        text-align: center;
     }
 
-    @media screen and (max-width: 571px) {
-        .onlysmall {
-            display: block;
-            border: 1px solid rgba(2, 109, 14, 0.3) !important;
-            border-radius: 2px;
-            padding: 0 30px;
-            margin-bottom: 20px;
-            background: rgba(4, 133, 125, 0.3) !important;
-            text-align: center;
-        }
-
-        ul {
-            padding-left: 0;
-        }
-
-        li {
-            list-style-type: none;
-        }
-
+    ul {
+        padding-left: 0;
     }
+
+    li {
+        list-style-type: none;
+    }
+
+}
 </style>
 
 <header>
@@ -62,13 +62,13 @@
             </div>
             <div class="navbar-translate">
                 <a class="navbar-brand" href="../../index.php" rel="tooltip"
-                   title="Created by Adam @ www.ui-design-engineering.com" data-placement="bottom">
+                    title="Created by Adam @ www.ui-design-engineering.com" data-placement="bottom">
                     myuitkit.com
                     <small>(sassified)</small>
                 </a>
                 <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navigation" aria-controls="navigation-index" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                    data-target="#navigation" aria-controls="navigation-index" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-bar bar1"></span>
                     <span class="navbar-toggler-bar bar2"></span>
                     <span class="navbar-toggler-bar bar3"></span>
@@ -87,7 +87,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" rel="tooltip" title="LinkedIn Profile" data-placement="bottom"
-                           href="https://www.linkedin.com/in/sassmaster/" target="_blank">
+                            href="https://www.linkedin.com/in/sassmaster/" target="_blank">
                             <i class="fa fa-linkedin"></i>
 
                             <p class="d-lg-none d-xl-none">LinkedIn</p>
@@ -95,7 +95,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" rel="tooltip" title="My Github" data-placement="bottom"
-                           href="https://github.com/zom-b-food" target="_blank">
+                            href="https://github.com/zom-b-food" target="_blank">
                             <i class="fa fa-github-square"></i>
 
                             <p class="d-lg-none d-xl-none">Github</p>
@@ -103,7 +103,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" rel="tooltip" title="Contact" data-placement="bottom"
-                           href="mailto:am@ui-design-engineering.com">
+                            href="mailto:am@ui-design-engineering.com">
                             <i class="fa fa-envelope"></i>
 
                             <p>am@ui-design-engineering.com</p>
@@ -115,8 +115,8 @@
     </nav>
     <!-- End Navbar -->
     <div class="page-header" filter-color="green">
-        <div class="page-header-image" data-parallax="true"
-             style="background-image: url('/dist/img/bg-parallax.jpg');"></div>
+        <div class="page-header-image" data-parallax="true" style="background-image: url('/dist/img/bg-parallax.jpg');">
+        </div>
         <!-- First Parallax Section -->
         <div class="container">
             <div class="pt100">
@@ -127,9 +127,10 @@
 
                 <div class="col-md-12 mt50 d-none d-sm-block">
                     <ul id="tabsJustified" class="nav nav-tabs">
-                        <li class="nav-item"><a href="/pages/jump.php" class="nav-link small text-uppercase square">About</a></li>
+                        <li class="nav-item"><a href="../pages/jump.php"
+                                class="nav-link small text-uppercase square">About</a></li>
                         <li class="nav-item"><a href="#" data-target="#current1" data-toggle="tab"
-                                                class="nav-link small text-uppercase active square">Templates</a></li>
+                                class="nav-link small text-uppercase active square">Templates</a></li>
                     </ul>
                     <div class="tab-wrapper">
                         <div id="tabsJustifiedContent" class="tab-content">
@@ -161,19 +162,19 @@
                                         <h4>Stock BS-4 Templates</h4>
                                         <ul>
                                             <li>
-                                                <a href="/pages/album.php">Album</a>
+                                                <a href="../pages/album.php">Album</a>
                                             </li>
                                             <li>
-                                                <a href="/pages/blog.php">Blog</a>
+                                                <a href="../pages/blog.php">Blog</a>
                                             </li>
                                             <li>
-                                                <a href="/pages/carousel.php">Carousel</a>
+                                                <a href="../pages/carousel.php">Carousel</a>
                                             </li>
                                             <li>
-                                                <a href="/pages/offcanvas.php">Offcanvas (sidebar)</a>
+                                                <a href="../pages/offcanvas.php">Offcanvas (sidebar)</a>
                                             </li>
                                             <li>
-                                                <a href="/pages/grid.php">Grid</a>
+                                                <a href="../pages/grid.php">Grid</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -181,20 +182,20 @@
                                         <h4>...More</h4>
                                         <ul>
                                             <li>
-                                                <a href="/pages/justified-nav.php">Justified Nav</a>
+                                                <a href="../pages/justified-nav.php">Justified Nav</a>
                                             </li>
                                             <li>
-                                                <a href="/pages/navbars.php">Navbars</a>
+                                                <a href="../pages/navbars.php">Navbars</a>
                                             </li>
                                             <li>
-                                                <a href="/pages/signin.php">Sign-in</a>
+                                                <a href="../pages/signin.php">Sign-in</a>
                                             </li>
                                             <li>
-                                                <a href="/pages/starter-template.php">Starter
+                                                <a href="../pages/starter-template.php">Starter
                                                     Template</a>
                                             </li>
                                             <li>
-                                                <a href="/pages/sticky-footer.php">Sticky Footer</a>
+                                                <a href="../pages/sticky-footer.php">Sticky Footer</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -220,35 +221,35 @@
                         <h4>Stock BS-4 Templates</h4>
                         <ul>
                             <li>
-                                <a href="/pages/album.php">Album</a>
+                                <a href="../pages/album.php">Album</a>
                             </li>
                             <li>
-                                <a href="/pages/blog.php">Blog</a>
+                                <a href="../pages/blog.php">Blog</a>
                             </li>
                             <li>
-                                <a href="/pages/carousel.php">Carousel</a>
+                                <a href="../pages/carousel.php">Carousel</a>
                             </li>
                             <li>
-                                <a href="/pages/offcanvas.php">Offcanvas (sidebar)</a>
+                                <a href="../pages/offcanvas.php">Offcanvas (sidebar)</a>
                             </li>
                             <li>
-                                <a href="/pages/grid.php">Grid</a>
+                                <a href="../pages/grid.php">Grid</a>
                             </li>
                             <li>
-                                <a href="/pages/justified-nav.php">Justified Nav</a>
+                                <a href="../pages/justified-nav.php">Justified Nav</a>
                             </li>
                             <li>
-                                <a href="/pages/navbars.php">Navbars</a>
+                                <a href="../pages/navbars.php">Navbars</a>
                             </li>
                             <li>
-                                <a href="/pages/signin.php">Sign-in</a>
+                                <a href="../pages/signin.php">Sign-in</a>
                             </li>
                             <li>
-                                <a href="/pages/starter-template.php">Starter
+                                <a href="../pages/starter-template.php">Starter
                                     Template</a>
                             </li>
                             <li>
-                                <a href="/pages/sticky-footer.php">Sticky Footer</a>
+                                <a href="../pages/sticky-footer.php">Sticky Footer</a>
                             </li>
                         </ul>
                     </div>
