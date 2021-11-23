@@ -137,11 +137,16 @@
 
 .tab-content {
   text-align:left;
+  padding: 2rem 0.5rem;
   > .tab-pane {
     display: none;
   }
   > .active {
     display: block;
+    
+  }
+  > .nopad {
+      padding:0;
   }
 }
 

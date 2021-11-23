@@ -111,7 +111,7 @@
                                 <div id="full1" class="tab-pane fade active show">
                                     <div class="row tight smoke">
                                         <div class="col-sm-6">
-                                            <p class="lead">This SASS-ified BS-4 Kit download is a php website that uses
+                                            <p>This SASS-ified BS-4 Kit download is a php website that uses
                                                 server-side includes for common components like header, navigation, and
                                                 footer. You can reskin the app by merely changing the scss variables.
                                                 The
@@ -120,7 +120,7 @@
                                                 examine the gulp file and make changes as you see fit.</p>
                                         </div>
                                         <div class="col-sm-6">
-                                            <p class="lead">Most elements/components are stock BS4, however I have used
+                                            <p>Most elements/components are stock BS4, however I have used
                                                 a
                                                 few plugins that perform better than the out-of-the-box Bootstrap.
                                                 Plugins
@@ -760,9 +760,9 @@
             </div>
             <!-- First Parallax Section -->
             <div class="paral paralsec txt-white">
-                <p class="lead pt20">Full-width Parallax Div/Row</p>
-                <p class="lead">Here is a short description 1</p>
-                <p class="lead">
+                <p class="pt20">Full-width Parallax Div/Row</p>
+                <p>Here is a short description 1</p>
+                <p>
                     <a class="btn btn-secondary btn-lg btn-md" href="#" role="button">Here is a button</a>
                 </p>
             </div>
@@ -792,16 +792,13 @@
                         </ul>
                         <div class="card-body">
                             <!-- Tab panes -->
-                            <div class="tab-content">
+                            <div class="tab-content nopad">
                                 <div class="tab-pane active" id="home" role="tabpanel">
                                     <p>"Everywhere but in Valencia people are mowing lawns, planting fences, tuning
                                         engines, counting receipts, baking bread, hanging laundry, keeping the wheel
                                         turning. Tradition, not convention, holds us here in Valencia . In the
                                         valley, the wheel does not turn. We keep it still, anchor it in the beach,
-                                        in the brackish water of Vero bay. But if I choose, I could sit on my hands
-                                        upon a dune and watch the sky, and when the clouds thin, I can raise my head
-                                        to watch the sea terns dipping into the waves and coming forth into the sky,
-                                        back into the light. </p>
+                                        in the brackish water of Vero bay. </p>
                                 </div>
                                 <div class="tab-pane" id="profile" role="tabpanel">
                                     <p> I could watch them glide inches above the sea...inches above the seatop at
@@ -809,19 +806,14 @@
                                         against the rushing backdrop is equally unfathomable, yet the little bird
                                         dismisses it without a sense of ego or bravado. Mass and energy, sprinting
                                         elements of wind and water exist outside the wheel where ambition and
-                                        progress is overruled by freedom and instinct. If I chose to, I could watch
-                                        the performance from a bluff, unconcerned with its science as the terns
-                                        artfully fly undaunted by the sea's eerie and magnetic charm. </p>
+                                        progress is overruled by freedom and instinct. </p>
                                 </div>
                                 <div class="tab-pane" id="messages" role="tabpanel">
                                     <p>I could watch these little birds dance like ice-skating companions whose
                                         familiar touches have been practiced to extinction. I could observe this
                                         foreplay of physics, the mating of balance and gravity that is today, at
                                         this precise moment, more dynamic than ever. And then suddenly comes the
-                                        peace. The serenity between the breezes, the incoming waves, the barking of
-                                        the gulls. It's like stepping off a treadmill and hearing its wheels and
-                                        bearings rub slowly to a stop. And everything is calm. A visual stillness
-                                        comes like a meteor getting darker the deeper it moves into space.</p>
+                                        peace. </p>
                                 </div>
                                 <div class="tab-pane" id="settings" role="tabpanel">
                                     <p> It is like a rest in a musical score when the chorus and the orchestra stops
@@ -829,9 +821,7 @@
                                         comes at the end of a foreign film before the credits when it is quiet and
                                         the last scene freezes upon the screen. I could see and hear that today on
                                         Tower Hill if I chose to. It is the last scene when serenity takes over and
-                                        the recapitulation finally and really does surrender. The tern drags a talon
-                                        along the seatop much like a lazy schoolgirl floating in a raft downstream
-                                        dips her foot into the flood, dragging a toe beneath her. "
+                                        the recapitulation finally and really does surrender."
                                     </p>
                                 </div>
                             </div>
@@ -858,7 +848,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="tab-content" id="myTabContent">
+                        <div class="tab-content nopad" id="myTabContent">
                             <div class="tab-pane fade show active p-3" id="one" role="tabpanel"
                                 aria-labelledby="one-tab">
                                 <h5 class="card-title">Tab Card One</h5>

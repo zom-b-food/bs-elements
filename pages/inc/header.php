@@ -137,14 +137,14 @@ $(window).load(function() {
                             <div id="full1" class="tab-pane fade">
                                 <div class="row tight smoke">
                                     <div class="col-sm-6">
-                                        <p class="lead">This SASS-ified BS-4 Kit download is a php website that uses
+                                        <p>This SASS-ified BS-4 Kit download is a php website that uses
                                             server-side includes for common components like header, navigation, and
                                             footer. You can reskin the app by merely changing the scss variables. The
                                             kit uses Grunt to compile and concatenate js and css files. Feel free to
                                             examine the grunt file and make changes as you see fit.</p>
                                     </div>
                                     <div class="col-sm-6">
-                                        <p class="lead">Most elements/components are stock BS4, however I have used a
+                                        <p>Most elements/components are stock BS4, however I have used a
                                             few plugins that perform better than the out-of-the-box Bootstrap. Plugins
                                             used:</p>
                                         <ul>

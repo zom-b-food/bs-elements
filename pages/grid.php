@@ -16,7 +16,7 @@
         <main role="main" class="container">
             <h1>Bootstrap grid examples</h1>
 
-            <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid
+            <p>Basic grid layouts to get you familiar with building within the Bootstrap grid
                 system.</p>
 
             <h3>Five grid tiers</h3>

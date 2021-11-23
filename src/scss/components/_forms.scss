@@ -106,8 +106,6 @@
   }
 }
 
-@include input-lg-padding($padding-large-vertical, $padding-input-horizontal);
-@include input-base-padding($padding-input-vertical, $padding-input-horizontal);
 
 .form-group.form-group-no-border,
 .input-group.form-group-no-border{
@@ -153,7 +151,7 @@
   border: 1px solid $light-gray;
   // border-radius: $btn-curved-radius;
   color: $dark-background;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 10px 1px 10px;
 
   @include transition-input-focus-color();
 
@@ -170,7 +168,6 @@
 
   & + .form-control,
   & ~ .form-control{
-    @include input-size($padding-base-vertical - 1, $padding-base-horizontal);
     padding-left: 18px;
   }
 
@@ -221,8 +218,8 @@
 
 .input-group-btn .btn{
   border-width: $border-thin;
-  padding: $padding-btn-vertical  $padding-base-horizontal;
 }
+
 .input-group-btn .btn-default:not(.btn-fill){
   border-color: $medium-gray;
 }
@@ -230,6 +227,7 @@
 .input-group-btn:last-child > .btn{
   margin-left: 0;
 }
+
 textarea.form-control{
   max-width: 100%;
   padding: 10px 10px 0 0;
@@ -263,37 +261,6 @@ textarea.form-control{
   margin-bottom: 20px;
 }
 
-
-/* -- Inputs -- */
-input[type="text"],
-input[type="search"],
-input[type="password"]{
-  background: #fff; /*fallback for non-CSS3 browsers*/
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#eee) to(#fff)); /*old webkit*/
-  background: -webkit-linear-gradient(#eee, #fff); /*new webkit*/
-  background: -moz-linear-gradient(#eee, #fff); /*gecko*/
-  background: -ms-linear-gradient(#eeeeee, #ffffff); /*IE10*/
-  background: -o-linear-gradient(#eee, #fff); /*opera 11.10+*/
-  background: linear-gradient(#eee, #fff); /*future CSS3 browsers*/
-  -pie-background: linear-gradient(#eee, #fff); /*PIE*/
-  border:1px solid $light-gray;
-  color: #666;
-  position:relative;
-  z-index: 0;
-  display: block;
-  vertical-align: middle;
-  border-radius: $btn-curved-radius;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-}
-
-:root input[type="text"],
-:root input[type="password"] {
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#ffffff')" ;
-} /* IE9 + IE10pp4 */
-
 textarea {
   background: #fff; /*fallback for non-CSS3 browsers*/
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#eee) to(#fff)); /*old webkit*/
@@ -317,64 +284,9 @@ textarea:focus {
   color: #000000 !important;
 }
 
-
 :root textarea {
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#ffffff')" ;
 } /* IE9 + IE10pp4 */
-
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-textarea:focus{
-  border-color:$light-gray;
-  -moz-box-shadow:0 0 2px #a1bac3;
-  -webkit-box-shadow:0 0 2px #a1bac3;
-  outline:none;
-  color: #222;
-  position:relative;
-  z-index: 0;
-}
-
-input[type="submit"],
-input[type="button"] {
-  width: auto;
-  margin-top:10px;
-  border:1px solid $light-gray;
-  border-radius: $btn-curved-radius;
-  box-shadow: 1px 1px 1px #649eb4;
-  background: linear-gradient(#eef7fa, #649eb4) repeat scroll 0% 0% transparent;
-  padding: 2px 10px;
-  color: #000;
-  font-weight: 300;
-  text-decoration: none;
-  position: relative;
-  text-align: center;
-}
-
-input[type="submit"]:hover,
-input[type="button"]:hover {
-
-  //border: 1px solid #5ab5d7;
-  background: linear-gradient(#649eb4, #eef7fa) repeat scroll 0% 0% transparent;
-}
-
-
-input.disabled, input.disabled:hover {
-  cursor: default;
-  width: auto;
-  margin-top:10px;
-  border:1px solid $light-gray;
-  border-radius: $btn-curved-radius;
-  box-shadow: 1px 1px 1px #649eb4;
-  background: linear-gradient(#4d4d4d, #4d4d4d) repeat scroll 0% 0% transparent;
-  padding: 2px 10px;
-  color: #000;
-  font-weight: 300;
-  text-decoration: none;
-  position: relative;
-  text-align: center;
-}
-
 
 select {
   color: #4d4d4d;
@@ -565,18 +477,6 @@ select {
   }
 }
 
-
-// Checkbox and radio options
-//
-// In order to support the browser's form validation feedback, powered by the
-// `required` attribute, we have to "hide" the inputs via `clip`. We cannot use
-// `display: none;` or `visibility: hidden;` as that also hides the popover.
-// Simply visually hiding the inputs via `opacity` would leave them clickable in
-// certain cases which is prevented by using `clip` and `pointer-events`.
-// This way, we ensure a DOM element is visible to position the popover from.
-//
-// See https://github.com/twbs/bootstrap/pull/12794 and
-// https://github.com/twbs/bootstrap/pull/14559 for more information.
 
 [data-toggle="buttons"] {
   > .btn,
@@ -771,18 +671,13 @@ select {
 
 }
 
-// Additional properties for button version
-// iOS requires the button element instead of an anchor tag.
-// If you want the anchor version, it requires `href="#"`.
-// See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
-
-// stylelint-disable property-no-vendor-prefix, selector-no-qualifying-type
 button.close {
   padding: 0;
   background: transparent;
   border: 0;
   -webkit-appearance: none;
 }
+
 // stylelint-enable
 @mixin gradient-bg($top, $bottom){
   background: $top; /* Old browsers */
@@ -1081,6 +976,210 @@ button.close {
   }
 }
 
-.form-group .form-control+.input-group-addon, .input-group .form-control+.input-group-addon {
-  padding: 5px 10px 5px 10px;
+
+/* ================= Inputs ==================== */
+
+input[type="text"],
+input[type="search"],
+input[type="password"]{
+  background: #fff; /*fallback for non-CSS3 browsers*/
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#eee) to(#fff)); /*old webkit*/
+  background: -webkit-linear-gradient(#eee, #fff); /*new webkit*/
+  background: -moz-linear-gradient(#eee, #fff); /*gecko*/
+  background: -ms-linear-gradient(#eeeeee, #ffffff); /*IE10*/
+  background: -o-linear-gradient(#eee, #fff); /*opera 11.10+*/
+  background: linear-gradient(#eee, #fff); /*future CSS3 browsers*/
+  -pie-background: linear-gradient(#eee, #fff); /*PIE*/
+  border:1px solid $light-gray;
+  color: #666;
+  position:relative;
+  z-index: 0;
+  display: block;
+  vertical-align: middle;
+  border-radius: $btn-curved-radius;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+:root input[type="text"],
+:root input[type="password"] {
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#ffffff')" ;
+} /* IE9 + IE10pp4 */
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus{
+  border-color:$light-gray;
+  -moz-box-shadow:0 0 2px #a1bac3;
+  -webkit-box-shadow:0 0 2px #a1bac3;
+  outline:none;
+  color: #222;
+  position:relative;
+  z-index: 0;
+}
+
+input[type="submit"],
+input[type="button"] {
+  width: auto;
+  margin-top:10px;
+  border:1px solid $light-gray;
+  border-radius: $btn-curved-radius;
+  box-shadow: 1px 1px 1px #649eb4;
+  background: linear-gradient(#eef7fa, #649eb4) repeat scroll 0% 0% transparent;
+  padding: 2px 10px;
+  color: #000;
+  font-weight: 300;
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+
+  //border: 1px solid #5ab5d7;
+  background: linear-gradient(#649eb4, #eef7fa) repeat scroll 0% 0% transparent;
+}
+
+
+input.disabled, input.disabled:hover {
+  cursor: default;
+  width: auto;
+  margin-top:10px;
+  border:1px solid $light-gray;
+  border-radius: $btn-curved-radius;
+  box-shadow: 1px 1px 1px #649eb4;
+  background: linear-gradient(#4d4d4d, #4d4d4d) repeat scroll 0% 0% transparent;
+  padding: 2px 10px;
+  color: #000;
+  font-weight: 300;
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+}
+
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    border: 1px solid #cacece;
+    width: 33px;
+    margin-top: -1px;
+    float: left;
+    background-color: rgba(255, 255, 255, .3);
+}
+
+input[type=checkbox]:active,
+input[type=checkbox]:checked:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input[type=checkbox]:checked {
+    background-color: #e9ecee;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+    color: #99a1a7;
+}
+
+input[type=checkbox]:checked:after {
+    content: '\2713';
+    font-size: 25px;
+    top: 3px;
+    padding-left: 6px;
+    color: #976740;
+    font-weight: bold;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+    font-size: 14px !important;
+    background-color: rgba(255, 255, 255, .3);
+}
+
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #03a9f4;
+    box-shadow: 0 1px 0 0 #03a9f4;
+}
+
+input[type=text]:focus:not([readonly])+label,
+input[type=password]:focus:not([readonly])+label,
+input[type=email]:focus:not([readonly])+label,
+input[type=url]:focus:not([readonly])+label,
+input[type=time]:focus:not([readonly])+label,
+input[type=date]:focus:not([readonly])+label,
+input[type=datetime-local]:focus:not([readonly])+label,
+input[type=tel]:focus:not([readonly])+label,
+input[type=number]:focus:not([readonly])+label,
+input[type=search]:focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #03a9f4 !important;
+}
+
+/*
+White Form Style
+------------------------------------------*/
+
+.white-form input[type=text],
+.white-form input[type=password],
+.white-form input[type=email],
+.white-form input[type=url],
+.white-form input[type=time],
+.white-form input[type=date],
+.white-form input[type=datetime-local],
+.white-form input[type=tel],
+.white-form input[type=number],
+.white-form input[type=search],
+.white-form textarea.materialize-textarea {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.white-form input[type=text]:focus:not([readonly]),
+.white-form input[type=password]:focus:not([readonly]),
+.white-form input[type=email]:focus:not([readonly]),
+.white-form input[type=url]:focus:not([readonly]),
+.white-form input[type=time]:focus:not([readonly]),
+.white-form input[type=date]:focus:not([readonly]),
+.white-form input[type=datetime-local]:focus:not([readonly]),
+.white-form input[type=tel]:focus:not([readonly]),
+.white-form input[type=number]:focus:not([readonly]),
+.white-form input[type=search]:focus:not([readonly]),
+.white-form textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+}
+
+.white-form .input-field label,
+.white-form input[type=text]:focus:not([readonly])+label,
+.white-form input[type=password]:focus:not([readonly])+label,
+.white-form input[type=email]:focus:not([readonly])+label,
+.white-form input[type=url]:focus:not([readonly])+label,
+.white-form input[type=time]:focus:not([readonly])+label,
+.white-form input[type=date]:focus:not([readonly])+label,
+.white-form input[type=datetime-local]:focus:not([readonly])+label,
+.white-form input[type=tel]:focus:not([readonly])+label,
+.white-form input[type=number]:focus:not([readonly])+label,
+.white-form input[type=search]:focus:not([readonly])+label,
+.white-form textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #fff !important;
 }

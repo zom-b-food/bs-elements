@@ -6,7 +6,6 @@
   &.nested {
     background-color:$secondary-color;
   }
-
 }
 
 .beefup:first-child {
@@ -17,12 +16,11 @@
   cursor: pointer;
   margin-bottom: 0;
   overflow: hidden;
+  padding-left: 30px;
   padding-right: 30px;
   position: relative;
   text-overflow: ellipsis;
   white-space: nowrap;
- 
-
 }
 
 .beefup__head::after {
@@ -56,7 +54,6 @@
   border-width: 0 10px 10px;
   border-color: transparent transparent $cream;
 }
-
 
 h4.beefup__head {
   font-size: 1em;

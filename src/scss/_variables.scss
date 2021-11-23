@@ -1,6 +1,6 @@
 // Variables
 //
-$sans-serif-family:          'Montserrat', 'Helvetica Neue',  Arial, sans-serif;
+$sans-serif-family:          "Rubik", sans-serif;
 $none:                       0   !default;
 $border-thin:                1px !default;
 $border-thick:               2px !default;
@@ -135,7 +135,7 @@ $accordion-border:           $secondary-color;
 
 // Fonts
 //
-$font-size-base:               13px;  // 1rem !default; - Assumes the browser default, typically `16px`
+$font-size-base:               14px;  // 1rem !default; - Assumes the browser default, typically `16px`
 $font-size-h1:                 $font-size-base * 2.25 !default;
 $font-size-h2:                 $font-size-base * 1.95 !default;
 $font-size-h3:                 $font-size-base * 1.55 !default;
@@ -153,7 +153,7 @@ $font-weight-light:             300         !default;
 $font-weight-normal:            400         !default;
 $font-weight-semi:              600         !default;
 $font-weight-bold:              700         !default;
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif:      "Rubik", sans-serif, !default;
 $font-family-monospace:       "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 $font-size-lg:                ($font-size-base * 1.25) !default;
@@ -325,11 +325,11 @@ $mark-bg: #fcf8e3 !default;
 
 // line-height
 //
-$line-height-base:            1.5 !default;
-$line-height-general:        1.5            !default;
+$line-height-base:           1.75 !default;
+$line-height-general:        1.75            !default;
 $line-height-nav-link:       1.625rem       !default;
 $btn-icon-line-height:       2.4em          !default;
-$line-height:                1.35em         !default;
+$line-height:                1.75em         !default;
 $line-height-lg:             54px           !default;
 
 // Tables
