@@ -125,7 +125,7 @@
                                                 few plugins that perform better than the out-of-the-box Bootstrap.
                                                 Plugins
                                                 used:</p>
-                                            <ul>
+                                            <ul class="special">
                                                 <li>jquery.bxslider.js</li>
                                                 <li>jquery.beefup.js</li>
                                                 <li>jquery.filtertable.js</li>
@@ -137,8 +137,8 @@
                                 <div id="current1" class="tab-pane fade">
                                     <div class="row tight smoke">
                                         <div class="col-sm-4">
-                                            <h4>Generic Page/Component Templates</h4>
-                                            <ul>
+                                            <h5>Generic Components</h5>
+                                            <ul class="special">
                                                 <li>
                                                     <a href="../pages/album.php">Album</a>
                                                 </li>
@@ -157,8 +157,8 @@
                                             </ul>
                                         </div>
                                         <div class="col-sm-4">
-                                            <h4>...More</h4>
-                                            <ul>
+                                            <h5>...More</h5>
+                                            <ul class="special">
                                                 <li>
                                                     <a href="../pages/justified-nav.php">Justified Nav</a>
                                                 </li>
@@ -178,7 +178,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-sm-4">
-                                            <h4>Demo Apps</h4>
+                                            <h5>Demo Apps</h5>
                                             <h5>
                                                 <a href="/flexor/index.html">Flexor</a>
                                             </h5>
@@ -197,7 +197,7 @@
                     <div class="tight onlysmall smoke">
                         <div class="col-sm-6">
                             <h4>Stock BS-4 Templates</h4>
-                            <ul>
+                            <ul class="special">
                                 <li>
                                     <a href="../pages/album.php">Album</a>
                                 </li>
@@ -381,6 +381,44 @@
                     <img src="../dist/img/avatar.jpg" alt="Thumbnail Image" class="rounded-circle img-raised">
                 </div>
             </div>
+            <div class="row">
+                <div class="col-sm-1">&nbsp;</div>
+                <div class="col-md-5"><br />
+                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                        <div class="mainflip">
+                            <div class="frontside">
+                                <div class="card">
+                                    <img class="card-img-top img- fluid" src="../dist/img/proudRufus.jpg"
+                                        alt="card image">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Card Title</h4>
+                                        <p class="card-text">This is basic card with image on top, title and
+                                            description.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backside">
+                                <div class="card">
+                                    <div class="card-header">
+                                        This is a Header
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Card Title</h4>
+                                        <p class="card-text">This is a card component with button, header and footer.
+                                        </p>
+                                        <a href="#" class="btn btn-info btn-md">Info Button</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        This is a Footer
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5"><br /><br />Hover over that thar card.</div>
+                <div class="col-sm-1">&nbsp;</div>
+            </div>
         </section>
         <hr />
         <section class="container wow fadeInUp">
@@ -438,6 +476,86 @@
 
 
 </pre>
+                </div>
+            </div>
+        </section>
+        <hr />
+        <section class="container wow fadeInUp">
+            <h2>Tables </h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Day</th>
+                                    <th scope="col">Article Name</th>
+                                    <th scope="col">Author</th>
+                                    <th scope="col">Words</th>
+                                    <th scope="col">Shares</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Bootstrap 4 CDN and Starter Template</td>
+                                    <td>Cristina</td>
+                                    <td>913</td>
+                                    <td>2.846</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Bootstrap Grid 4 Tutorial and Examples</td>
+                                    <td>Cristina</td>
+                                    <td>1.434</td>
+                                    <td>3.417</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Bootstrap Flexbox Tutorial and Examples</td>
+                                    <td>1.877</td>
+                                    <td>1.234</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <table class="table table-dark table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Day</th>
+                                    <th scope="col">Article Name</th>
+                                    <th scope="col">Author</th>
+                                    <th scope="col">Words</th>
+                                    <th scope="col">Shares</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Bootstrap 4 CDN and Starter Template</td>
+                                    <td>Cristina</td>
+                                    <td>913</td>
+                                    <td>2.846</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Bootstrap Grid 4 Tutorial and Examples</td>
+                                    <td>Cristina</td>
+                                    <td>1.434</td>
+                                    <td>3.417</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Bootstrap Flexbox Tutorial and Examples</td>
+                                    <td>1.877</td>
+                                    <td>1.234</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>

@@ -397,6 +397,25 @@ a.back-to-top {
   left: 0;
   text-align: center; }
 
+ul.special li {
+ line-height:2em;
+ padding-left:0px;
+ padding-top:5px;
+ padding-bottom:5px;
+ font-size:14px;
+ list-style-type:none;
+ list-style:none;
+ display: table-row;
+}
+
+ul.special li:before {
+ font-family: 'FontAwesome';
+ content: "\f192";
+ color: $cream;
+ padding-right:10px;
+ display: table-cell;
+}
+
 
 /*      transitions */
 .presentation .front,
@@ -461,6 +480,7 @@ a.back-to-top {
   padding-left:12px;
   background-color: lightgray;
 }
+
 /* Signin Form
 --------------------------------------------------  */
 
@@ -510,6 +530,85 @@ a.back-to-top {
 .gj-datepicker-bootstrap span[role="right-icon"].input-group-addon {
   border-top-right-radius: 12px !important;
   border-bottom-right-radius: 12px !important;
+}
+
+.image-flip:hover .backside, .image-flip.hover .backside {
+-webkit-transform: rotateY(0deg);
+-moz-transform: rotateY(0deg);
+-o-transform: rotateY(0deg);
+-ms-transform: rotateY(0deg);
+transform: rotateY(0deg);
+}
+
+.image-flip:hover .frontside, .image-flip.hover .frontside {
+-webkit-transform: rotateY(180deg);
+-moz-transform: rotateY(180deg);
+-o-transform: rotateY(180deg);
+transform: rotateY(180deg);
+}
+
+.image-flip {
+margin-bottom:200px;
+width: 300px;
+height: 250px;
+}
+
+.mainflip {
+-webkit-transition: 1s;
+-webkit-transform-style: preserve-3d;
+-ms-transition: 1s;
+-moz-transition: 1s;
+-moz-transform: perspective(1000px);
+-moz-transform-style: preserve-3d;
+-ms-transform-style: preserve-3d;
+transition: 1s;
+transform-style: preserve-3d;
+position: relative;
+}
+
+.frontside, .backside {
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-ms-backface-visibility: hidden;
+backface-visibility: hidden;
+-webkit-transition: 1s;
+-webkit-transform-style: preserve-3d;
+-moz-transition: 1s;
+-moz-transform-style: preserve-3d;
+-o-transition: 1s;
+-o-transform-style: preserve-3d;
+-ms-transition: 1s;
+-ms-transform-style: preserve-3d;
+transition: 1s;
+transform-style: preserve-3d;
+position: absolute;
+top: 0;
+left: 0;
+}
+
+.frontside {
+-webkit-transform: rotateY(0deg);
+-ms-transform: rotateY(0deg);
+z-index: 2;
+}
+
+.backside {
+background: white;
+-webkit-transform: rotateY(-180deg);
+-moz-transform: rotateY(-180deg);
+-o-transform: rotateY(-180deg);
+-ms-transform: rotateY(-180deg);
+transform: rotateY(-180deg);
+}
+
+.card, .card-img-top {
+border-radius: 0;
+}
+
+.table-image {
+  td, th {
+    vertical-align: middle;
+  }
 }
 
  @media screen and (min-width: 572px) {
